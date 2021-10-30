@@ -4,10 +4,14 @@ import styled from 'styled-components/native';
 const BookView = styled.ScrollView`
     padding: 10px;
 `;
-const Book = props => {
+const Book = ({ book })  => {
     return (
         <BookView>
-            <Text>{props.book.title}</Text>
+            <Text>
+                Book by {book.author} 
+                {/* Book by {book.author.username}  */}
+            </Text>
+            <Text>{book.title}</Text>
         </BookView>
     );
 };

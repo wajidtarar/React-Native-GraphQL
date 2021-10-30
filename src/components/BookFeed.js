@@ -33,7 +33,7 @@ const BookFeed = props => {
     return(
         <View>
             <FlatList
-                data={books}
+                data={props.books}
                 keyExtractor={({ id }) => id.toString()}
                 ItemSeparatorComponent={() => <Separator />}
                 renderItem={
